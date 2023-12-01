@@ -1,4 +1,4 @@
-const URL = ``
+const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json`
 //section_name:"Movies" AND type_of_material:"Review"
 ///articlesearch.json?q={query}&fq={filter}
 
@@ -11,8 +11,8 @@ async function getData(URL){
         }
         //take resposne from server and convert it to JSON
         const data = await response.json();
-        document.querySelector("h1").textContent = data.content;
-        document.querySelector("h2").textContent = data.author;
+        document.querySelector("h1").textContent = data.headline;
+        document.querySelector("h2").textContent = data.content;
     } catch(error){
         document.querySelector("h1").textContent = error;
         document.querySelector("h2").textContent = 

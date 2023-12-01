@@ -11,7 +11,8 @@ nuggies.then((result) =>{
 });
  */
 //REST API
-const URL = `https://api.quotable.io/random`;
+
+/* const URL = `https://api.quotable.io/random`;
 
 async function getData(URL){
     try{
@@ -31,4 +32,4 @@ async function getData(URL){
     }
 
 }
-getData(URL);
+getData(URL); */

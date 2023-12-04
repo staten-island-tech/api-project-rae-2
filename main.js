@@ -20,3 +20,7 @@ async function getData(URL){
     }
 
 }
+
+const DOMSelectors = {
+    
+}

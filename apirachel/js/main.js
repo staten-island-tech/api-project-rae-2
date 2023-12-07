@@ -1,8 +1,19 @@
-const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json`
+//const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json`
 //section_name:"Movies" AND type_of_material:"Review"
 ///articlesearch.json?q={query}&fq={filter}
 
-async function getData(URL){
+ async function getData(){
+    let res = await fetch(
+        "https://api.nytimes.com/svc/search/v2/articlesearch?api_key=IlDTyL1asczST3qrMjc8G0hfcxqVnIDm.json"
+    );
+    let data = await res.json();
+
+    data.results.forEach((article) => console.log(article));
+        
+}
+getData();
+
+/* async function getData(URL){
     try{
         const response = await fetch(URL);
         console.log(response);
@@ -20,7 +31,4 @@ async function getData(URL){
     }
 
 }
-
-const DOMSelectors = {
-    
-}
+ */

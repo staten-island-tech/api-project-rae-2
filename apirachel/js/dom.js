@@ -1,6 +1,6 @@
-//do we even need this
+//do i even need this
 const DOMSelectors = {
-    search: document.querySelector("#searchbar")
+    
 }
 
 export { DOMSelectors }

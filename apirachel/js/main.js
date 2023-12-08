@@ -4,7 +4,8 @@
 
  async function getData(){
     let res = await fetch(
-        "https://api.nytimes.com/svc/search/v2/articlesearch?api_key=IlDTyL1asczST3qrMjc8G0hfcxqVnIDm.json"
+        "https://api.nytimes.com/svc/search/v2/articlesearch?.json",
+        "api_key=IlDTyL1asczST3qrMjc8G0hfcxqVnIDm" //???
     );
     let data = await res.json();
 

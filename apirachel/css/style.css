@@ -1,6 +1,6 @@
 :root{
-    --darkgreen: #30583a;
-    --primary: var(--darkgreen);
+    --color: #b4b7db;
+    --primary: var(--color);
 }
 body{
     background-color: var(--primary);
@@ -27,10 +27,20 @@ body,
     font-family: 'Manrope', sans-serif;
     transition: all .5s;
 }
-
-#searchbar{
-    align-items: center;
+.bar{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
 }
+.button{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+
 .title:hover {
     transform: scale(0.9);
     filter:opacity(40%);

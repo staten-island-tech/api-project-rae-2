@@ -4,12 +4,11 @@
 
  async function getData(){
     let res = await fetch(
-        "https://api.nytimes.com/svc/search/v2/articlesearch?.json",
-        "api_key=IlDTyL1asczST3qrMjc8G0hfcxqVnIDm" //???
+        "https://api.nytimes.com/svc/archive/v1/2019/1.json?api_key=9uvWWArbW6ve7PmoNDNg4Uk0gb7eRKKb" //???
     );
     let data = await res.json();
 
-    data.results.forEach((article) => console.log(article));
+    data.multimedia.forEach((multimedia) => console.log(multimedia.rank));
         
 }
 getData();

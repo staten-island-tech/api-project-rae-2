@@ -23,17 +23,76 @@ body,
 
 #container{
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#bar{
+.all{
     flex-direction: row;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
-    background-color: #45665150;
+    background-color: #f8f8f850;
 }
 
-.button{
+.open{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+
+.temp{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+
+.bk{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+
+.bx{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+
+.fl{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+
+.qn{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+.mh{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f8f850;
+}
+
+.other{
     flex-direction: row;
     text-align: center;
     font-size: 1.2rem;

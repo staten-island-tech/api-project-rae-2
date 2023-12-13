@@ -1,10 +1,11 @@
 //const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json`
 //section_name:"Movies" AND type_of_material:"Review"
+//https://api.nytimes.com/svc/archive/v1/2019/1.json?api_key=9uvWWArbW6ve7PmoNDNg4Uk0gb7eRKKb
 ///articlesearch.json?q={query}&fq={filter}
 
  async function getData(){
     let res = await fetch(
-        "https://api.nytimes.com/svc/archive/v1/2019/1.json?api_key=9uvWWArbW6ve7PmoNDNg4Uk0gb7eRKKb" //???
+        "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023" //???
     );
     let data = await res.json();
 

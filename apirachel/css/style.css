@@ -25,6 +25,14 @@ body,
     display: flex;
 }
 
+#bar{
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #45665150;
+}
+
 .button{
     flex-direction: row;
     text-align: center;

@@ -9,7 +9,7 @@
     );
     let data = await res.json();
 
-    data.multimedia.forEach((multimedia) => console.log(multimedia.rank));
+    data.forEach((computer) => console.log(computer.calendar_year));
         
 }
 getData();

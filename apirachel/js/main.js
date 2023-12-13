@@ -9,7 +9,7 @@
     );
     let data = await res.json();
 
-    data.forEach((computer) => console.log(computer.oversight_agency, computer.full_location_address, computer.operating_status));
+    data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
         
 }
 getData();

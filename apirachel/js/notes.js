@@ -34,13 +34,3 @@ async function getData(URL){
 }
 getData(URL); */
 
-const Gabe = {
-    name: "Gabe", //string
-    age: 15, //number
-    isCool: false, //boolean
-
-};
-console.log(Gabe.name[0]);
-for (let i = 0; i < Gabe.name.length, i++){
-    console.log(Gabe.name[i]);
-}

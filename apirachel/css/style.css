@@ -29,6 +29,19 @@ body,
     align-items: center;
 }
 
+#search{
+    margin-top: 10px;
+    flex-direction: row;
+    text-align: center;
+    background-color: #f8f8f850;
+}
+
+.click{
+    margin-top: 5px;
+    font-size: 1.0rem;
+    font-family: 'Manrope', sans-serif;
+}
+
 .all{
     flex-direction: row;
     text-align: center;

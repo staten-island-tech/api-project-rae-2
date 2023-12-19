@@ -36,6 +36,11 @@ body,
     background-color: #cccb8250;
 }
 
+#results{
+    margin-top: 10px;
+    flex-direction: row;
+    text-align: center;
+}
 .click{
     margin-top: 5px;
     font-size: 1.0rem;

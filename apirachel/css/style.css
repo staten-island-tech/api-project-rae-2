@@ -71,46 +71,7 @@ body,
     background-color: #f8f8f850;
 }
 
-.bk{
-    flex-direction: row;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Manrope', sans-serif;
-    background-color: #f8f8f850;
-}
-
-.bx{
-    flex-direction: row;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Manrope', sans-serif;
-    background-color: #f8f8f850;
-}
-
-.fl{
-    flex-direction: row;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Manrope', sans-serif;
-    background-color: #f8f8f850;
-}
-
-.qn{
-    flex-direction: row;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Manrope', sans-serif;
-    background-color: #f8f8f850;
-}
-.mh{
-    flex-direction: row;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Manrope', sans-serif;
-    background-color: #f8f8f850;
-}
-
-.other{
+.chair{
     flex-direction: row;
     text-align: center;
     font-size: 1.2rem;

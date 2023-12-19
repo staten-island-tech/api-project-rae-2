@@ -2,7 +2,7 @@
 //section_name:"Movies" AND type_of_material:"Review"
 //https://api.nytimes.com/svc/archive/v1/2019/1.json?api_key=9uvWWArbW6ve7PmoNDNg4Uk0gb7eRKKb
 ///articlesearch.json?q={query}&fq={filter}
-
+import { DOMSelectors } from "./dom";
  async function getData(){
     let res = await fetch(
         "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023" //???
@@ -10,6 +10,20 @@
     let data = await res.json();
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
+
+/*     DOMSelectors.result.innerHTML = "";
+    arr.forEach((pet)=> {
+    const newObject = document.createElement("div");
+    newObject.innerHTML = 
+    `
+    <h2 class="card-title">${computer.full_location_address}</h2>
+    <h3 class="openornot">${computer.operating_status}</h3>
+    <h3 class="agency">${computer.oversight_agency}</h3>
+    <h3 class="access">${computer.wheelchair_accessible}</h3>
+    `
+    newObject.result.add("card")
+    DOMSelectors.result.appendChild(newObject)
+  })}; */
         
 }
 getData();

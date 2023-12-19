@@ -11,19 +11,23 @@ import { DOMSelectors } from "./dom";
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
 
-/*     DOMSelectors.result.innerHTML = "";
+/*     
+function makeCards(arr){
+    DOMSelectors.result.innerHTML = "";
     arr.forEach((pet)=> {
     const newObject = document.createElement("div");
     newObject.innerHTML = 
     `
-    <h2 class="card-title">${computer.full_location_address}</h2>
+    <h2 class="place">${computer.full_location_address}</h2>
     <h3 class="openornot">${computer.operating_status}</h3>
     <h3 class="agency">${computer.oversight_agency}</h3>
     <h3 class="access">${computer.wheelchair_accessible}</h3>
     `
     newObject.result.add("card")
     DOMSelectors.result.appendChild(newObject)
-  })}; */
+  })}; 
+makeCards(everything)
+*/
         
 }
 getData();

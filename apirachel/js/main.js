@@ -1,4 +1,4 @@
-// import { DOMSelectors } from "./dom";
+ import { DOMSelectors } from "./dom";
 
  async function getData(){
     let res = await fetch(
@@ -9,7 +9,7 @@
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
 
 //this is for the all computers button
-/*     function makeCards(arr){
+function makeCards(arr){
         DOMSelectors.results.innerHTML = "";
         arr.forEach((computer)=> {
         const newObject = document.createElement("div");
@@ -21,7 +21,7 @@
         newObject.result.add("card")
         DOMSelectors.results.appendChild(newObject)
       })}; 
-    makeCards(everything) */
+makeCards() 
         
 }
 getData();

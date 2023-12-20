@@ -3,6 +3,7 @@
 //https://api.nytimes.com/svc/archive/v1/2019/1.json?api_key=9uvWWArbW6ve7PmoNDNg4Uk0gb7eRKKb
 ///articlesearch.json?q={query}&fq={filter}
 import { DOMSelectors } from "./dom";
+
  async function getData(){
     let res = await fetch(
         "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023" //???
@@ -11,26 +12,30 @@ import { DOMSelectors } from "./dom";
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
 
-/*     
-function makeCards(arr){
-    DOMSelectors.result.innerHTML = "";
-    arr.forEach((pet)=> {
-    const newObject = document.createElement("div");
-    newObject.innerHTML = 
-    `
-    <h2 class="place">${computer.full_location_address}</h2>
-    <h3 class="openornot">${computer.operating_status}</h3>
-    <h3 class="agency">${computer.oversight_agency}</h3>
-    <h3 class="access">${computer.wheelchair_accessible}</h3>
-    `
-    newObject.result.add("card")
-    DOMSelectors.result.appendChild(newObject)
-  })}; 
-makeCards(everything)
-*/
+//whats a module
+    function makeCards(arr){
+        DOMSelectors.results.innerHTML = "";
+        arr.forEach((computer)=> {
+        const newObject = document.createElement("div");
+        newObject.innerHTML = 
+        `
+        <h2 class="place">${computer.full_location_address}</h2>
+        <h3 class="co">${computer.operating_status}</h3>
+        <h3 class="agency">${computer.oversight_agency}</h3>
+        <h3 class="access">${computer.wheelchair_accessible}</h3>
+        `
+        newObject.result.add("card")
+        DOMSelectors.results.appendChild(newObject)
+      })}; 
+    makeCards(everything)
         
 }
 getData();
+
+async function getData(){
+
+}
+
 
 /* async function getData(URL){
     try{

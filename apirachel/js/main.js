@@ -7,6 +7,7 @@ import { DOMSelectors } from "./dom";
     let data = await res.json();
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
+    
 //this is for the all computers button
     function makeCards(arr){
         DOMSelectors.results.innerHTML = "";
@@ -28,8 +29,11 @@ getData();
 async function getData(){
 
 }
+
+//wheelchair and open or not
 //<h3 class="access">${computer.wheelchair_accessible}</h3>
 //<h3 class="co">${computer.operating_status}</h3>
+
 /* async function getData(URL){
     try{
         const response = await fetch(URL);

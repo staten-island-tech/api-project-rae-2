@@ -1,7 +1,3 @@
-//const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json`
-//section_name:"Movies" AND type_of_material:"Review"
-//https://api.nytimes.com/svc/archive/v1/2019/1.json?api_key=9uvWWArbW6ve7PmoNDNg4Uk0gb7eRKKb
-///articlesearch.json?q={query}&fq={filter}
 import { DOMSelectors } from "./dom";
 
  async function getData(){
@@ -12,7 +8,6 @@ import { DOMSelectors } from "./dom";
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
 
-//whats a module
     function makeCards(arr){
         DOMSelectors.results.innerHTML = "";
         arr.forEach((computer)=> {

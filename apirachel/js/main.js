@@ -11,6 +11,7 @@ const newArr = []
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
 
 //this is for the all computers button
+
     }
 getData();
 

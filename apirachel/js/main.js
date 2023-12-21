@@ -1,30 +1,34 @@
  import { DOMSelectors } from "./dom";
 
+const newArr = []
+
  async function getData(){
     let res = await fetch(
         "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023" //???
     );
     let data = await res.json();
+    newArr.push(data);
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
 
 //this is for the all computers button
 function makeCards(arr){
     DOMSelectors.results.innerHTML = "";
-        arr.forEach((thing)=> {
+        arr.forEach((computer)=> {
         const newObject = document.createElement("div");
         newObject.innerHTML = 
         `
-        <h2 class="place">${thing.computer.full_location_address}</h2>
-        <h3 class="agency">${thing.computer.oversight_agency}</h3>
+        <h2 class="place">${computer.full_location_address}</h2>
+        <h3 class="agency">${computer.oversight_agency}</h3>
         `
         newObject.result.add("card")
         DOMSelectors.results.appendChild(newObject)
       })}; 
-makeCards(); 
+makeCards(newArr); 
 
 }
 getData();
+
 
 
 //wheelchair and open or not

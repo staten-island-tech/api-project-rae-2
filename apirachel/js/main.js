@@ -1,5 +1,4 @@
- import { DOMSelectors } from "./dom";
-
+import { DOMSelectors } from "./dom"
 const newArr = []
 
  async function getData(){
@@ -12,21 +11,7 @@ const newArr = []
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
 
 //this is for the all computers button
-function makeCards(arr){
-    DOMSelectors.results.innerHTML = "";
-        arr.forEach((computer)=> {
-        const newObject = document.createElement("div");
-        newObject.innerHTML = 
-        `
-        <h2 class="place">${computer.full_location_address}</h2>
-        <h3 class="agency">${computer.oversight_agency}</h3>
-        `
-        newObject.result.add("card")
-        DOMSelectors.results.appendChild(newObject)
-      })}; 
-makeCards(newArr); 
-
-}
+    }
 getData();
 
 

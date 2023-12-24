@@ -1,19 +1,34 @@
 import { DOMSelectors } from "./dom"
 const newArr = []
 
- async function getData(){
-    let res = await fetch(
-        "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023" //???
-    );
-    let data = await res.json();
+async function getData() {
+    const api = "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023";
+    
+    try {
+      const response = await fetch(api);
+      
+      if (!response.ok) {
+        throw new Error('erm erorr !!');
+      }
+      
+      const data = await response.json();
+      displayData(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+  
+  function displayData(data) {
+    // Display data on the webpage as needed
     newArr.push(data);
 
-    data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address));
+    data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address)); 
 
 //this is for the all computers button
 
-    }
-getData();
+  }
+  
+  getData();
 
 
 

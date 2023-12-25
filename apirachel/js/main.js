@@ -19,12 +19,9 @@ async function getData() {
   }
   
   function displayData(data) {
-    // Display data on the webpage as needed
     newArr.push(data);
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address)); 
-
-//this is for the all computers button
 
   }
   

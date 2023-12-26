@@ -1,5 +1,7 @@
 let API = `https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023`;
 
+const newArr = []
+
 const DOMSelectors = {
   every: document.querySelector(".all"),
   yes: document.querySelector(".open"),
@@ -10,7 +12,7 @@ const DOMSelectors = {
 };
 
 async function getData(API) {
-/*     const api = "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023";
+    const api = "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023";
     
     try {
       const response = await fetch(api);
@@ -30,10 +32,9 @@ async function getData(API) {
     newArr.push(data);
 
     data.forEach((computer) => console.log(computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address)); 
-*/
   } 
   
-  getData();
+  getData(); 
 
 
 

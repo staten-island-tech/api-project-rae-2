@@ -1,4 +1,4 @@
-const newArr = []
+let newArr = []
 
 const DOMSelectors = {
     every: document.querySelector(".all"),  //every public computer, should include computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address
@@ -49,7 +49,7 @@ const DOMSelectors = {
   
   getData();
 
-  DOMSelectors.idk2.addEventListener('click', function() {
+/*   DOMSelectors.idk2.addEventListener('click', function() {
     const keyword = DOMSelectors.idk.value.toLowerCase();
     
     // Filter the data based on the keyword
@@ -79,3 +79,4 @@ const DOMSelectors = {
       DOMSelectors.output.appendChild(computerInfo);
     });
   }
+ */

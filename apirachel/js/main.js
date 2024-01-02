@@ -35,11 +35,11 @@ const DOMSelectors = {
       const computerInfo = document.createElement('div');
       
       computerInfo.innerHTML = `
-        <p><strong>Operating Status:</strong> ${computer.operating_status}</p>
-        <p><strong>Oversight Agency:</strong> ${computer.oversight_agency}</p>
-        <p><strong>Wheelchair Accessible:</strong> ${computer.wheelchair_accessible}</p>
-        <p><strong>Full Location Address:</strong> ${computer.full_location_address}</p>
-        <hr>
+      <p><strong>Operating Status:</strong> ${computer.operating_status}</p>
+      <p><strong>Oversight Agency:</strong> ${computer.oversight_agency}</p>
+      <p><strong>Wheelchair Accessible:</strong> ${computer.wheelchair_accessible}</p>
+      <p><strong>Full Location Address:</strong> ${computer.full_location_address}</p>
+      <hr>
       `;
       
       // Append the computerInfo div to the #results div!!!

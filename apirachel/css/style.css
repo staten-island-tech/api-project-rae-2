@@ -41,6 +41,7 @@ body,
     margin-top: 10px;
     flex-direction: row;
     text-align: center;
+    font-size: 1.8rem;
 }
 .click{
     margin-top: 5px;

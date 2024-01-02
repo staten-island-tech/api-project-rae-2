@@ -55,12 +55,10 @@ const DOMSelectors = {
     // Filter the data based on the keyword
     const filteredData = newArr[0].filter(computer => computer.full_location_address.toLowerCase().includes(keyword));
   
-    // Display the filtered data
     displayFilteredData(filteredData);
   });
   
   function displayFilteredData(filteredData) {
-    // Clear previous data from the #results div
     DOMSelectors.output.innerHTML = '';
   
     filteredData.forEach((computer) => {
@@ -75,7 +73,6 @@ const DOMSelectors = {
         <hr>
       `;
       
-      // Append the computerInfo div to the #results div
       DOMSelectors.output.appendChild(computerInfo);
     });
   }

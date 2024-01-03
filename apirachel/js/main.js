@@ -58,7 +58,7 @@ const DOMSelectors = {
       const response = await fetch(api);
       
       if (!response.ok) {
-        throw new Error('Error fetching data');
+        throw new Error('didnt work, lil bro. fetch data problem');
       }
       
       const data = await response.json();
@@ -84,7 +84,7 @@ const DOMSelectors = {
       const response = await fetch(api);
       
       if (!response.ok) {
-        throw new Error('Error fetching data');
+        throw new Error('didnt work, lil bro. fetch data problem');
       }
       
       const data = await response.json();
@@ -110,7 +110,7 @@ const DOMSelectors = {
       const response = await fetch(api);
       
       if (!response.ok) {
-        throw new Error('Error fetching data');
+        throw new Error('didnt work, lil bro. fetch data problem');
       }
       
       const data = await response.json();

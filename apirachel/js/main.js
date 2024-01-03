@@ -2,6 +2,9 @@ let newArr = []
 
 const DOMSelectors = {
     every: document.querySelector(".all"),  //every public computer, should include computer.operating_status, computer.oversight_agency, computer.wheelchair_accessible, computer.full_location_address
+    yes: document.querySelector(".open"),  //when this button is clicked, should show only computers that are open to the public
+    no: document.querySelector(".close"),  //when this button is clicked, should show only computers that are closed
+    hm: document.querySelector(".chair"),  //when this button is clicked, should show only computers that are wheelchair accessible
     idk: document.querySelector(".bar"),   //the search bar to manually search for a computer's location from a keyword
     idk2: document.querySelector(".click"),   //once clicked, should show each computer's location in the keyword inputted into the search bar
     output: document.querySelector("#results"),   //the div that prints out all the above data
@@ -43,34 +46,83 @@ const DOMSelectors = {
       DOMSelectors.output.appendChild(computerInfo);
     });
   }
-  
-  getData();
 
-/*   DOMSelectors.idk2.addEventListener('click', function() {
-    const keyword = DOMSelectors.idk.value.toLowerCase();
-    
-    // Filter the data based on the keyword
-    const filteredData = newArr[0].filter(computer => computer.full_location_address.toLowerCase().includes(keyword));
-  
-    displayFilteredData(filteredData);
+  DOMSelectors.yes.addEventListener('click', function() {
+    filterComputersByOperatingStatus('Open'); // Filtering for computers that are in operation
   });
   
-  function displayFilteredData(filteredData) {
-    DOMSelectors.output.innerHTML = '';
-  
-    filteredData.forEach((computer) => {
-      const computerInfo = document.createElement('div');
+  async function filterComputersByOperatingStatus(Open) {
+    const api = "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023";
+    
+    try {
+      const response = await fetch(api);
       
-      // Set the inner HTML for the computerInfo div
-      computerInfo.innerHTML = `
-        <p><strong>Operating Status:</strong> ${computer.operating_status}</p>
-        <p><strong>Oversight Agency:</strong> ${computer.oversight_agency}</p>
-        <p><strong>Wheelchair Accessible:</strong> ${computer.wheelchair_accessible}</p>
-        <p><strong>Full Location Address:</strong> ${computer.full_location_address}</p>
-        <hr>
-      `;
+      if (!response.ok) {
+        throw new Error('Error fetching data');
+      }
       
-      DOMSelectors.output.appendChild(computerInfo);
-    });
+      const data = await response.json();
+      
+      // Filter the data based on wheelchair accessibility
+      const filteredData = data.filter(computer => computer.operating_status === Open);
+      
+      // Display the filtered data
+      displayData(filteredData);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
- */
+
+  DOMSelectors.hm.addEventListener('click', function() {
+    filterComputersByAccessibility('Yes'); // Filtering for computers w/ wheelchair access
+  });
+  
+  async function filterComputersByAccessibility(wheelchair) {
+    const api = "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023";
+    
+    try {
+      const response = await fetch(api);
+      
+      if (!response.ok) {
+        throw new Error('Error fetching data');
+      }
+      
+      const data = await response.json();
+      
+      // Filter the data based on wheelchair accessibility
+      const filteredData = data.filter(computer => computer.wheelchair_accessible === wheelchair);
+      
+      // Display the filtered data
+      displayData(filteredData);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+
+  DOMSelectors.no.addEventListener('click', function() {
+    filterComputersByClosed(['Not Operating', 'Temporarily Closed']); // Filtering for computers that r closed
+  });
+  
+  async function filterComputersByClosed(closed) {
+    const api = "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023";
+    
+    try {
+      const response = await fetch(api);
+      
+      if (!response.ok) {
+        throw new Error('Error fetching data');
+      }
+      
+      const data = await response.json();
+      
+      // Filter the data based on wheelchair accessibility
+      const filteredData = data.filter(computer => closed.includes(computer.operating_status));
+      
+      // Display the filtered data
+      displayData(filteredData);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+  
+  getData();

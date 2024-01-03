@@ -41,8 +41,7 @@ const DOMSelectors = {
         <h3>Full Location Address:</h3> ${computer.full_location_address}<br>
         <hr>
       `;
-      
-      // Append the computerInfo div to the #results div
+
       DOMSelectors.output.appendChild(computerInfo);
     });
   }
@@ -62,11 +61,9 @@ const DOMSelectors = {
       }
       
       const data = await response.json();
-      
-      // Filter the data based on wheelchair accessibility
+
       const filteredData = data.filter(computer => computer.operating_status === Open);
-      
-      // Display the filtered data
+
       displayData(filteredData);
     } catch (error) {
       console.error('Error:', error);
@@ -89,10 +86,8 @@ const DOMSelectors = {
       
       const data = await response.json();
       
-      // Filter the data based on wheelchair accessibility
       const filteredData = data.filter(computer => computer.wheelchair_accessible === wheelchair);
       
-      // Display the filtered data
       displayData(filteredData);
     } catch (error) {
       console.error('Error:', error);
@@ -115,10 +110,8 @@ const DOMSelectors = {
       
       const data = await response.json();
       
-      // Filter the data based on wheelchair accessibility
       const filteredData = data.filter(computer => closed.includes(computer.operating_status));
-      
-      // Display the filtered data
+
       displayData(filteredData);
     } catch (error) {
       console.error('Error:', error);

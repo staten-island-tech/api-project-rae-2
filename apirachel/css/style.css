@@ -42,6 +42,7 @@ body,
     flex-direction: row;
     text-align: center;
     font-size: 1.8rem;
+    font-family: 'Manrope', sans-serif;
 }
 .click{
     margin-top: 5px;

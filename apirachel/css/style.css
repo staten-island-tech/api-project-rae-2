@@ -54,7 +54,7 @@ body,
 .all{
     flex-direction: row;
     width: 180px;
-    height: 50px;
+    height: 42px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
@@ -63,8 +63,8 @@ body,
 
 .open{
     flex-direction: row;
-    width: 120px;
-    height: 50px;
+    width: 130px;
+    height: 42px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
@@ -74,7 +74,7 @@ body,
 .close{
     flex-direction: row;
     width: 250px;
-    height: 50px;
+    height: 42px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
@@ -84,7 +84,7 @@ body,
 .chair{
     flex-direction: row;
     width: 180px;
-    height: 50px;
+    height: 42px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;

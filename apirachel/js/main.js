@@ -28,7 +28,7 @@ const DOMSelectors = {
   }
   
   function displayData(data) {
-    // Clear previous data from the #results div
+    // Clears previous data from the #results div
     DOMSelectors.output.innerHTML = '';
     
     data.forEach((computer) => {
@@ -45,6 +45,10 @@ const DOMSelectors = {
       DOMSelectors.output.appendChild(computerInfo);
     });
   }
+
+  DOMSelectors.every.addEventListener('click', function() {
+   
+  });
 
   DOMSelectors.yes.addEventListener('click', function() {
     filterComputersByOperatingStatus('Open'); // Filtering for computers that are in operation
@@ -95,7 +99,7 @@ const DOMSelectors = {
   }
 
   DOMSelectors.no.addEventListener('click', function() {
-    filterComputersByClosed(['Not Operating', 'Temporarily Closed']); // Filtering for computers that r closed
+    filterComputersByClosed(['Not Operating', 'Temporarily Closed']); //computers that r closed
   });
   
   async function filterComputersByClosed(closed) {

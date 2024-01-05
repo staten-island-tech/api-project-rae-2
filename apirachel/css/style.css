@@ -45,6 +45,7 @@ body,
     font-family: 'Manrope', sans-serif;
 }
 .click{
+    width: 100px;
     margin-top: 5px;
     font-size: 1.0rem;
     font-family: 'Manrope', sans-serif;
@@ -52,6 +53,8 @@ body,
 
 .all{
     flex-direction: row;
+    width: 180px;
+    height: 50px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
@@ -60,6 +63,8 @@ body,
 
 .open{
     flex-direction: row;
+    width: 120px;
+    height: 50px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
@@ -68,6 +73,8 @@ body,
 
 .close{
     flex-direction: row;
+    width: 250px;
+    height: 50px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;
@@ -76,6 +83,8 @@ body,
 
 .chair{
     flex-direction: row;
+    width: 180px;
+    height: 50px;
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Manrope', sans-serif;

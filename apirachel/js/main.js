@@ -35,10 +35,10 @@ const DOMSelectors = {
       const computerInfo = document.createElement('div');
       
       computerInfo.innerHTML = `
-        <h3>Is it Open?:</h3> ${computer.operating_status}<br>
-        <h3>Library/Agency:</h3> ${computer.oversight_agency}<br>
-        <h3>Wheelchair?:</h3> ${computer.wheelchair_accessible}<br>
-        <h3>Full Location Address:</h3> ${computer.full_location_address}<br>
+        <h3 tabindex="0">Is it Open?:</h3> ${computer.operating_status}<br>
+        <h3 tabindex="0">Library/Agency:</h3> ${computer.oversight_agency}<br>
+        <h3 tabindex="0">Wheelchair?:</h3> ${computer.wheelchair_accessible}<br>
+        <h3 tabindex="0">Full Location Address:</h3> ${computer.full_location_address}<br>
         <hr>
       `;
 

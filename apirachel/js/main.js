@@ -35,9 +35,9 @@ const DOMSelectors = {
       const computerInfo = document.createElement('div');
       
       computerInfo.innerHTML = `
-        <h3>Operating Status:</h3> ${computer.operating_status}<br>
-        <h3>Oversight Agency:</h3> ${computer.oversight_agency}<br>
-        <h3>Wheelchair Accessible:</h3> ${computer.wheelchair_accessible}<br>
+        <h3>Is it Open?:</h3> ${computer.operating_status}<br>
+        <h3>Library/Agency:</h3> ${computer.oversight_agency}<br>
+        <h3>Wheelchair?:</h3> ${computer.wheelchair_accessible}<br>
         <h3>Full Location Address:</h3> ${computer.full_location_address}<br>
         <hr>
       `;
@@ -103,6 +103,7 @@ const DOMSelectors = {
     }
   }
 
+  //THERE ARE WHEELCHAIRSSSSS
   DOMSelectors.hm.addEventListener('click', function() {
     filterComputersByAccessibility('Yes'); // Filtering for computers w/ wheelchair access
   });
@@ -127,6 +128,7 @@ const DOMSelectors = {
     }
   }
 
+  //not open lol
   DOMSelectors.no.addEventListener('click', function() {
     filterComputersByClosed(['Not Operating', 'Temporarily Closed']); //computers that r closed
   });

@@ -46,10 +46,39 @@ const DOMSelectors = {
     });
   }
 
-  DOMSelectors.every.addEventListener('click', function() {
-   
+  //SEARCH SEARCH SRAEACH SEARRRRCHHHH
+  DOMSelectors.idk2.addEventListener('click', function() {
+    //this is where the searching happens
+    const meow = document.querySelector('.bar').value.trim().toLowerCase();
+    haha(meow);
   });
 
+  async function haha(meow) {
+    const api = "https://data.cityofnewyork.us/resource/sejx-2gn3.json?calendar_year=2023";
+    
+    try {
+        const response = await fetch(api);
+        
+        if (!response.ok) {
+            throw new Error('HAHA ERRORRRRR (fetching data)');
+        }
+        
+        const data = await response.json();
+        const filteredData = data.filter(computer => 
+          computer.full_location_address.toLowerCase().includes(meow)
+      );
+      displayData(filteredData);
+    } catch (error) {
+      console.error('Error:', error);
+  }
+}
+
+//RESET RESET RESET
+  DOMSelectors.every.addEventListener('click', function() {
+   getData();
+  });
+
+  //OPEN OPEN OPEN
   DOMSelectors.yes.addEventListener('click', function() {
     filterComputersByOperatingStatus('Open'); // Filtering for computers that are in operation
   });

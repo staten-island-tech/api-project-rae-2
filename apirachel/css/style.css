@@ -35,6 +35,7 @@ body,
     flex-direction: row;
     text-align: center;
     background-color: #cccb8250;
+    font-size: 25px;
 }
 
 #results{
